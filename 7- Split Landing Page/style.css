@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --left-bg-color: rgba(51, 116, 214, 0.6);
+    --right-bg-color: rgba(32, 32, 32, 0.7);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.side {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.side h1 {
+    color: #fff;
+    font-size: 3.75rem;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.side.left {
+    left: 0;
+    background: url(../7-\ Split\ Landing\ Page/ps.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.side.left::before {
+    content: '';
+    position: absolute;
+    background-color: var(--left-bg-color);
+    width: 100%;
+    height: 100%;
+}
+
+.side.right {
+    right: 0;
+    background: url(../7-\ Split\ Landing\ Page/xbox.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--right-bg-color);
+}
+
+.side.right::before {
+    content: '';
+    position: absolute;
+    background-color: var(--right-bg-color);
+    width: 100%;
+    height: 100%;
+}
+
+.side.left,
+.side.right,
+.side.left::before,
+.side.right::before {
+    transition: all 1s ease-in-out;
+}
+
+.btn {
+    padding: 12px 32px;
+    border: 3px solid rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 60px;
+    border-radius: 8px;
+    z-index: 1;
+    transition: scale 400ms ease;
+}
+
+.btn:hover {
+    scale: 1.05;
+}
+
+@media (max-width:800px) {
+    .btn {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+    .side h1 {
+        font-size: 2rem;
+    }
+}
