@@ -5,29 +5,43 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(216, 86, 86);
+}
+
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
+    flex-direction: column;
+    color: white;
 }
 
-.loading-text {
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    font-weight: 900;
-    position: absolute;
-    z-index: 1;
+.container h1 {
+    margin: 0.5rem;
+    text-align: center;
 }
 
-.bg {
-    background: url(../5-\ Blured\ Loading/kouspace.jpg) no-repeat center;
-    background-size: cover;
-    height: calc(100vh + 60px);
-    width: calc(100vw + 60px);
-    filter: blur(40px);
-    position: absolute;
-    top: -30px;
-    left: -30px;
-    z-index: 0;
+.content {
+    font-size: 28px;
+    background-color: rgb(23, 23, 23);
+    width: 360px;
+    height: 180px;
+    border-radius: 8px;
+    margin: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 800ms;
+    transform: translateX(-300%);
+    box-shadow: 2px 8px 12px 1px rgba(0, 0, 0, 0.8);
+}
+
+.content:nth-of-type(even) {
+    transform: translateX(300%);
+}
+
+.content.show {
+    transform: translateX(0);
 }

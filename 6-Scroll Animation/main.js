@@ -1,24 +1,18 @@
-const bg = document.querySelector('.bg');
-const loadText = document.querySelector('.loading-text');
-let load = 0;
+const container = document.querySelector('.container');
+const content = document.querySelectorAll('.content');
 
-let int = setInterval(() => {
-    blurring()
-}, 20);
+const showContent = () => {
+    const triggerAnimation = window.innerHeight / 1.5 * 1.4;
 
-function blurring() {
-    load++;
-    if (load > 99) {
-        clearInterval(int);
-    }
-
-    loadText.innerHTML = load + '%';
-    loadText.style.opacity = scale(load, 0, 100, 1, 0);
-    bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`
+    content.forEach(item => {
+        const itemsTop = item.getBoundingClientRect().top;
+        if (itemsTop < triggerAnimation) {
+            item.classList.add('show');
+        } else{
+            item.classList.remove('show');
+        }
+    })
 }
 
-
-
-function scale(number, inMin, inMax, outMin, outMax) {
-    return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-}
+showContent();
+window.addEventListener('scroll', showContent);
