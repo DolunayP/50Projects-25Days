@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    background-color: rgb(0, 71, 157);
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+}
+
+.container h1 {
+    margin-block: 24px;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+textarea {
+    font-size: 18px;
+    color: black;
+    outline: 0;
+}
+
+.description {
+    margin-bottom: 16px;
+}
+
+.choices {
+    margin: 14px auto;
+}
+
+.choice {
+    background-color: #ffffff7e;
+    border-radius: 8px;
+    padding: 10px;
+    margin: auto 3px;
+    color: black;
+}
+
+.highlight {
+    background-color: #fff;
+}
