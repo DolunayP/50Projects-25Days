@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: rgb(52, 158, 233);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Roboto Mono';
+}
+
+nav {
+    background-color: rgb(26, 59, 136);
+    width: 100%;
+    height: 6%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: 0;
+    padding-right: 16px;
+}
+
+.search {
+    background-color: rgba(0, 0, 0, 0.35);
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    padding: 8px;
+    outline: 0;
+}
+
+.search::placeholder {
+    color: white;
+}
+
+.container {
+    position: relative;
+    margin-top: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.movie-box {
+    border: 2px solid black;
+    width: 240px;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4);
+    margin: 8px;
+}
+
+.movie-photo {
+    background-color: black;
+    border-radius: 10px;
+    width: 100%;
+    height: 80%;
+    margin-bottom: 12px;
+}
+
+.text {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 08px;
+}
+
+.movie-name {
+    background-color: rgb(57, 85, 109);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.movie-point {
+    background-color: rgb(57, 85, 109);
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-info {
+    background-color: black;
+    padding: 4px;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(101%);
+    transition: all 700ms;
+}
+
+.movie-box:hover .movie-info {
+    transform: translateY(0);
+}
