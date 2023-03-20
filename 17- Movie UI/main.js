@@ -1,43 +1,50 @@
-const cup = document.querySelector('.cup');
-const smallCups = document.querySelectorAll('.small-cups');
-const percentage = document.querySelector('.percentage');
-const liters = document.querySelector('.liters');
-const remained = document.querySelector('.remained small')
+const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=c2c80d16557365ce10efac79974c78f0&page=1';
+const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
+const SEARCH_URL = 'https://api.themoviedb.org/3/search/movie?api_key=c2c80d16557365ce10efac79974c78f0&query="';
 
-smallCups.forEach((item, idx) => {
-    item.addEventListener('click', function () {
-        fillCups(idx);
-    })
+const form = document.querySelector('form');
+const input = document.querySelector('.search');
+const container = document.querySelector('.container');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const searchWord = input.value;
+
+    if (searchWord && searchWord != '') {
+        getMovies(SEARCH_URL + searchWord);
+        input.value = '';
+    } else {
+        window.location.reload();
+    }
 })
 
-function fillCups(idx) {
-    if (smallCups[idx].classList.contains('full') && !smallCups[idx + 1].classList.contains('full')) {
-        idx--;
-    }
+getMovies(API_URL);
 
-    smallCups.forEach((full, index) => {
-        if (idx >= index) {
-            full.classList.add('full');
-        } else {
-            full.classList.remove('full');
-        }
-    });
-
-    updateCup(idx);
+async function getMovies(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    showMovies(data.results);
 }
 
-function updateCup(index) {
-    let fillPercentage = (index + 1) * 12.5;
-    percentage.style.height = fillPercentage + '%';
-    percentage.innerText = fillPercentage + '%';
-    let hesap = (2 - ((index + 1) * 250 / 1000));
-    liters.innerText = hesap + 'L';
+function showMovies(movies) {
+    container.innerHTML = '';
 
-    if (fillPercentage === 100) {
-        remained.style.display = 'none';
-        liters.style.display = 'none';
-    } else {
-        remained.style.display = 'flex';
-        liters.style.display = 'flex';
-    }
+    movies.forEach(movie => {
+        const { title, poster_path, vote_average, overview } = movie
+
+        const movieEl = document.createElement('div');
+        movieEl.classList.add('movie-box');
+        movieEl.innerHTML = `
+            <img src="${IMG_PATH + poster_path}">
+            <div class="text">
+                <div class="movie-name">${title}</div>
+                <div class="movie-point">${vote_average}</div>
+            </div>
+            <div class="movie-info">
+                <h3>Overview</h3>
+                <p>${overview}</p>
+            </div>
+        `;
+        container.appendChild(movieEl);
+    });
 }
