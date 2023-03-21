@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: rgb(52, 158, 233);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Roboto Mono';
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    transition: 500ms ease;
+}
+
+.container::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.slider-background {
+    width: 60vw;
+    height: 60vh;
+    position: relative;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.427);
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: 600ms ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.arrow {
+    font-size: 30px;
+    position: fixed;
+    background-color: transparent;
+    outline: 0;
+    border: 2px solid black;
+    z-index: 2;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-arrow {
+    left: calc(15vw - 60px)
+}
+
+.right-arrow {
+    right: calc(15vw - 60px)
+}
