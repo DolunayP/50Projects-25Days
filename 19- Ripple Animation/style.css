@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    position: relative;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 600ms ease;
+    font-size: 20px;
+    padding: 11px 16px;
+    background-color: blueviolet;
+    color: #fff;
+    overflow: hidden;
+}
+
+.circle {
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 600ms ease-out;
+}
+
+@keyframes scale {
+
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+
+}
