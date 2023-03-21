@@ -5,8 +5,7 @@ const container = document.querySelector('.container');
 const sliderContainer = document.querySelector('.slider-background')
 
 activeSlide = 0;
-console.log(slides)
-bgBody();
+setBody();
 function setBody() {
     container.style.backgroundImage = slides[activeSlide].style.backgroundImage;
 }
