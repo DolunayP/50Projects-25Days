@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
+
+html.dark {
+    --primary-color: #fff;
+    --secondary-color: #000;
+}
+
+html.dark {
+    background-color: #000;
+    color: white;
+}
+
+html {
+    transition: all 0.5s ease-out;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Heebo';
+    transition: all 0.6s ease-in;
+}
+
+.toggle {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 0;
+    position: absolute;
+    top: 80px;
+    cursor: pointer;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    height: 240px;
+    width: 240px;
+    position: relative;
+}
+
+
+.needle {
+    height: 90px;
+    width: 3px;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 0.6s ease-in;
+    transform-origin: bottom;
+}
+
+.center-point {
+    background-color: #d70a0a;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.second {
+    transform: translate(-50%, -100%) rotate(0deg);
+    background-color: #d70a0a;
+}
+
+.hour {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 50px;
+}
+
+.minute {
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.digital {
+    margin-top: 18px;
+    font-size: 56px;
+}
+
+.date {
+    margin-top: 6px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
