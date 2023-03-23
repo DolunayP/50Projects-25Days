@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Heebo';
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+}
+
+#canvas {
+    border: 2px solid navy;
+    border-radius: 4px;
+}
+
+.toolbox {
+    border: 2px solid navy;
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-radius: 4px;
+    background-color: rgb(118, 118, 246);
+}
+
+.toolbox>* {
+    padding: 8px;
+    cursor: pointer;
+    margin: 8px;
+    background-color: white;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+}
+
+.clear {
+    position: absolute;
+    right: 16px;
+}
