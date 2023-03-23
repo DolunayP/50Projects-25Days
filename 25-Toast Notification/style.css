@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    background: rgb(30, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 18px;
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    background-color: rebeccapurple;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+    scale: 0.98;
+}
+
+.success {
+    color: rgb(3, 255, 49) !important;
+}
+
+.error {
+    color: red !important;
+}
+
+.warning {
+    color: yellow !important;
+}
+
+.message-box {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.message {
+    padding: 10px 14px;
+    background-color: rebeccapurple;
+    font-weight: 550;
+    font-size: 16px;
+    margin: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-transform: capitalize;
+}
