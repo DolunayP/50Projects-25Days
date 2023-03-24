@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'Muli';
+
+}
+
+.photo {
+    background: url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80') no-repeat center center/cover;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    height: 400px;
+    width: 360px;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+i {
+    color: rgb(234, 35, 35);
+
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.photo i {
+    position: absolute;
+    animation: grow 0.7s linear;
+    transform: translate(-50%, -50%) scale(0);
+
+}
+
+@keyframes grow {
+    to {
+        transform: translate(-50%, -50%) scale(6);
+        opacity: 0;
+    }
+}
