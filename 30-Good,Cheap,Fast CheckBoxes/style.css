@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'Muli';
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin: 12px auto;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.toggle {
+    visibility: hidden;
+}
+
+.label {
+    background-color: rgb(165, 165, 165);
+    width: 80px;
+    height: 40px;
+    position: relative;
+    margin: 0 10px 0;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.ball {
+    width: 33px;
+    height: 33px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    animation: toggleOff 0.4s linear;
+
+}
+
+.toggle:checked+.label {
+    background-color: rebeccapurple;
+}
+
+.toggle:checked+.label .ball {
+    animation: toggleOn 0.4s linear forwards;
+
+}
+
+
+@keyframes toggleOn {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+
+    50% {
+        transform: translateX(20px) scale(1.2);
+    }
+
+    100% {
+        transform: translateX(40px) scale(1);
+    }
+}
+
+@keyframes toggleOff {
+    0% {
+        transform: translateX(40px) scale(1);
+    }
+
+    50% {
+        transform: translateX(20px) scale(1.2);
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
