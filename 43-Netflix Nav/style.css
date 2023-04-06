@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.text {
+  margin: 0;
+  font-size: 20px;
+}
+
+.logo {
+  width: 200px;
+}
+
+.nav-btn {
+  font-size: 24px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.nav-open {
+  position: fixed;
+  top: 6px;
+  left: 15px;
+}
+
+.nav-close {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+ul li {
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.nav {
+  height: 100%;
+  transform: translateX(-100%);
+  position: fixed;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav.visible {
+  transform: translateX(0);
+}
+
+.nav-black {
+  background-color: rgb(30, 30, 30);
+  width: 92%;
+  transition-delay: 0.4s;
+  max-width: 400px;
+  min-width: 320px;
+}
+
+.nav-black.visible {
+  transition-delay: 0s;
+}
+
+.nav-red {
+  background-color: rgb(223, 7, 7);
+  width: 92%;
+  transition-delay: 0.2s;
+}
+
+.nav-red.visible {
+  transition-delay: 0.2s;
+}
+
+.nav-white {
+  width: 92%;
+  background-color: #f8f8f9;
+  position: relative;
+}
+
+.nav-white.visible {
+  transition-delay: 0.4s;
+}
