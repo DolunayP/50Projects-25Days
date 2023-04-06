@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(244, 243, 225);
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  font-size: 18px;
+}
+
+.panel-container {
+  padding: 30px 50px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: #f7f7f7;
+  max-width: 400px;
+}
+
+.rating-container {
+  display: flex;
+  flex: 1;
+  margin: 30px 0;
+}
+
+.rating {
+  margin: 4px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.rating img {
+  width: 50px;
+  height: 50px;
+}
+
+.rating small {
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.rating:hover,
+.rating.active {
+  scale: 1.01;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  width: 120px;
+  padding: 16px;
+  background-color: black;
+  color: #fff;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+
+.btn:active {
+  scale: 0.95;
+}
