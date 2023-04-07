@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(315deg, rgb(197, 197, 197) 0%, rgb(234, 234, 234) 100%);
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.quiz-container {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: #f7f7f7;
+  max-width: 560px;
+  width: 400px;
+}
+
+.question {
+  text-align: center;
+  width: 100%;
+  padding: 6px;
+  margin-top: 26px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.answer-container {
+  list-style-type: none;
+  padding: 20px 40px;
+
+}
+
+.answer-container li {
+  padding: 4px;
+  margin: 12px auto;
+}
+
+.answer-container li label {
+  cursor: pointer;
+}
+
+.answer {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
+
+.btn {
+  width: 100%;
+  padding: 16px;
+  background-color: rgb(108, 0, 109);
+  color: #fff;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+
+.btn:active {
+  scale: 0.95;
+}
