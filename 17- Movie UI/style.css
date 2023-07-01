@@ -10,7 +10,7 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    background: rgb(52, 158, 233);
+    background: rgb(42, 50, 55);
     color: white;
     display: flex;
     align-items: center;
@@ -20,9 +20,9 @@ body {
 }
 
 nav {
-    background-color: rgb(26, 59, 136);
+    background-color: rgb(0, 0, 0);
     width: 100%;
-    height: 6%;
+    height: 8%;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -30,15 +30,19 @@ nav {
     top: 0;
     padding-right: 20px;
     padding-left: 32px;
+    z-index: 99;
+    padding-inline: 6.8rem;
+    box-shadow: 0px 5px 14px 0px #00000082;
 }
 
 .search {
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(90, 90, 90, 0.763);
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 0;
-    padding: 8px;
+    padding: 12px;
     outline: 0;
+    width: 20rem;
 }
 
 .search::placeholder {
